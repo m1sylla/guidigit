@@ -1,0 +1,7 @@
+# ignore ALL .log files
+*-old.*
+blog-detail.html
+project-detail.html
+
+# ignore ALL files in ANY directory named temp
+old/
