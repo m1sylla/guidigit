@@ -207,6 +207,11 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 a:hover,
 a:active,
 a:focus {
@@ -593,8 +598,35 @@ a:focus {
 
 
 /*---------------------------------------
-      BLOG DETAIL
+      BLOG DETAIL 2022
   -----------------------------------------*/
+
+.blog-detail__summary ul li::before {
+    content: '\220E';
+    font-size: var(--p-font-size);
+    color: var(--title-color);
+    margin-right: 10px;
+}
+
+.blog-detail__content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.blog-detail .share ul li {
+    display: inline;
+}
+
+.blog-detail .share-popup i {
+    font-size: var(--h3-font-size);
+}
+
+.blog-detail .share-popup i:hover {
+    color: var(--secondary-color);
+}
 
 
 /*---------------------------------------

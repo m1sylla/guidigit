@@ -50,12 +50,25 @@ $(function() {
  * BLOG
  ***************************/
 
-// SOCIAL SHARE
+/* SOCIAL SHARE  */
 let shareButton = document.querySelectorAll(".share-popup");
-let windowsSize = "";
+let windowSize = "";
 for (let i = 0; i < shareButton.length; i++) {
     shareButton[i].addEventListener("click", function() {
-        window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+        let url = this.href;
+        let domain = url.split("/")[2];
+        switch (domain) {
+            case "www.facebook.com":
+                windowSize = "width=585,height=368";
+                break;
+            case "www.twitter.com":
+                windowSize = "width=585,height=494";
+                break;
+            case "www.linkedin.com":
+                windowSize = "width=570,height=494";
+                break;
+        }
+        window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,' + windowSize);
         return false;
     });
 }
